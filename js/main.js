@@ -1,23 +1,24 @@
-let firstPrize = 299;
-const companyName = "CLG";
-let greeting = "Hello!";
-let morning = true;
+// console.log(10-3);
+// console.log(10*3);
+// console.log(10/3);
+// console.log(10%3);
 
-// console.log(morning);
-// console.log(firstPrize);
-// console.clear();
+// let attendee = 1;
+// console.log(attendee++);
+// console.log(attendee--);
 
-let firstWinner = "Grace";
-// console.log ("The winner is " + firstWinner);
-// console.log(`The winner is still ${firstWinner}`);
+// let attendeeName = "Sam";
+// console.log(typeof attendeeName);
 
-let winnerAnnouncement = `The winner is really still ${firstWinner}`;
+let Laila = 7;
+let Yumi = 14;
+console.log(Yumi >= 7 && Yumi <= 12);
 
-let result = winnerAnnouncement.toUpperCase();
+// ternary operator syntax
+// condition ? ifTrue : ifFalse
 
-// console.log(result);
+let age = 36;
 
-// console.log(`${result.length}`);
+const schoolOfCode = (age >18) ? "You're in!" : "Check out code camps...";
 
-let resultLength = result.length;
-console.log(resultLength);
+console.log(schoolOfCode);
