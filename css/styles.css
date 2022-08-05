@@ -64,7 +64,7 @@ footer {
 }
 
 .highlighted {
-    background-color: #ef4b54;
+    background-color: #ef4b4b;
     color: white;
     padding-right: 0.1em;
     padding-left: 0.1em;
@@ -74,4 +74,17 @@ footer {
     transform: rotate(-6deg);
     margin-top: 3px;
     display: block;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    display: block;
+    background-color: pink;
+    border-radius: 3px;
+    margin-top: 2rem;
+}
+
+.btn-pop {
+    background-color: #ef4b4b;
+    font-size: 2rem;
 }

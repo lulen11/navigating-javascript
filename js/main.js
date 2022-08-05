@@ -1,24 +1,27 @@
-// console.log(10-3);
-// console.log(10*3);
-// console.log(10/3);
-// console.log(10%3);
+// document.getElementById("main-content").style.backgroundColor = "#f8ced2";
 
-// let attendee = 1;
-// console.log(attendee++);
-// console.log(attendee--);
+// let wrappers = document.querySelector(".wrapper");
 
-// let attendeeName = "Sam";
-// console.log(typeof attendeeName);
+// wrappers.style.backgroundColor = "#ef4b54";
 
-let Laila = 7;
-let Yumi = 14;
-console.log(Yumi >= 7 && Yumi <= 12);
 
-// ternary operator syntax
-// condition ? ifTrue : ifFalse
 
-let age = 36;
+// const clicker = document.getElementById("clicker");
 
-const schoolOfCode = (age >18) ? "You're in!" : "Check out code camps...";
+// function popWhizBang() {
+//     alert("hey there!");
+//     clicker.style.color = "#ef4be9";
+//     clicker.innerHTML = "You did it!"
+// }
 
-console.log(schoolOfCode);
+// clicker.addEventListener("dblclick",popWhizBang);
+
+
+let button = document.querySelector(".btn");
+
+
+function poppyBtn() {
+    button.classList.toggle("btn-pop");
+}
+
+button.addEventListener("click", poppyBtn);
