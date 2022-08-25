@@ -1,27 +1,27 @@
-// document.getElementById("main-content").style.backgroundColor = "#f8ced2";
+let womenInTech = ["Ruby", "Effie", "Alex", "Harriet"];
 
-// let wrappers = document.querySelector(".wrapper");
+let ages = [31, 19, 21, 64];
 
-// wrappers.style.backgroundColor = "#ef4b54";
+// To access an array item by the index number
+// console.log(womenInTech[0]);
 
+// ages.sort();
 
+// console.log(ages);
 
-// const clicker = document.getElementById("clicker");
+// womenInTech.pop();
+// womenInTech.push("Amy");
 
-// function popWhizBang() {
-//     alert("hey there!");
-//     clicker.style.color = "#ef4be9";
-//     clicker.innerHTML = "You did it!"
-// }
+// console.log(womenInTech);
 
-// clicker.addEventListener("dblclick",popWhizBang);
-
-
-let button = document.querySelector(".btn");
-
-
-function poppyBtn() {
-    button.classList.toggle("btn-pop");
+function welcomeMessage(person){
+    console.log("Welcome to the CLG community, "+ person +". We're so glad you're here")
 }
 
-button.addEventListener("click", poppyBtn);
+womenInTech.forEach(welcomeMessage);
+
+function awardsOver30(recepient){
+    return recepient >= 30;
+}
+
+console.log(ages.filter(awardsOver30));
