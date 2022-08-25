@@ -4,17 +4,17 @@ let lon = '144.9991673684373';
 
 const apiCall = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apiKey+'&units=metric';
 
-// function fetchWeather() {
-//     fetch(apiCall)
-//     .then((response) => response.json())
-//     .then((data) => document.getElementById("city").innerHTML = data.name);
-// }
-
 function fetchWeather() {
     fetch(apiCall)
-        .then((response) => response.json())
-        .then((data) => console.log(data));
-    }
+    .then((response) => response.json())
+    .then((data) => document.getElementById("temp").innerHTML = data.main.temp);
+}
+
+// function fetchWeather() {
+//     fetch(apiCall)
+//         .then((response) => response.json())
+//         .then((data) => console.log(data));
+//     }
 
 fetchWeather();
 
