@@ -15,15 +15,32 @@
 		</div>
 	</header>
 
-	<section id="main-content">
+	<section id="main-content" class="main">
 		<div class="wrapper">
-			<h1>Let's learn <span class="highlighted">JavaScript</span> together!</h1>
-			<!-- <h1 id="clicker">Let's go</h1> -->
+			<h1>
+				Congrats! You've reached the end of your
+				<span class="highlighted">Navigating JavaScript</span> course!</h1>
 			<img id="hand" class="hand" src="images/hand.png" alt="ok hand" />
-			<a class="btn">Let's go</a>
-			<div class="weather-widget">
-				<h3>The temperature in your city is: <span id="temp"></span> degrees celcius</h3>
+			<p>Are you at the end?</p>
+			<div class="flex">
+				<a class="btn">Yes</a>
+				<a class="btn">No</a>
 			</div>
+			<p class="quote"></p>
+			<div class="next-courses">
+				<p class=""><strong>Are either of these courses up next for you?</strong></p>
+				<div class="flex">
+					<a class="btn toggle node">Node</a>
+					<a class="btn toggle react">React</a>
+				</div>
+			</div>
+
+			<div id="course-card" class="course-card hideAndShow">
+				<h3 id="course"></h3>
+				<p id="course-details"></p>
+			</div>
+			<canvas id="canvas"></canvas>
+
 		</div>
 	</section>
 	

@@ -1,24 +1,24 @@
-const apiKey = '0f1cbc6fc2151af2df8d76990ed9905e';
-let lat = '-37.823960709402435';
-let lon = '144.9991673684373';
 
-const apiCall = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apiKey+'&units=metric';
+function draw() {
+    const canvas = document.getElementById("canvas");
+    if (canvas.getContext) {
+        const ctx = canvas.getContext("2d");
 
-function fetchWeather() {
-    fetch(apiCall)
-    .then((response) => response.json())
-    .then((data) => document.getElementById("temp").innerHTML = data.main.temp);
+        ctx.beginPath();
+        ctx.arc(150, 75, 50, 0, Math.PI * 2, true); // face
+        ctx.moveTo(110, 75);
+        ctx.arc(150, 75, 40, 0, Math.PI, false); // mouth
+        ctx.moveTo(140, 65);
+        ctx.arc(135, 65, 5, 0, Math.PI * 5, true); // left eye
+        ctx.moveTo(170, 65);
+        ctx.arc(165, 65, 5, 0, Math.PI * 5, true); // right eye
+        ctx.stroke();
+    }
 }
 
-// function fetchWeather() {
-//     fetch(apiCall)
-//         .then((response) => response.json())
-//         .then((data) => console.log(data));
-//     }
 
-fetchWeather();
-
-
-fetch("https://dog.ceo/api/breeds/image/random")
+function inspireYou() {
+    fetch("https://api.goprogram.ai/inspiration")
     .then((response) => response.json())
-    .then((data) => console.log(data.message));
+    .then((data) => document.querySelector(".quote").innerHTML = data.quote);
+}

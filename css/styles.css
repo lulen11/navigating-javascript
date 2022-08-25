@@ -1,15 +1,17 @@
 body, p {
     margin: 0;
     padding: 0;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 h1, h3 {
     color: #25255F;
     padding: 1em 0;
     margin: 0;
+    font-family: Times, serif;
 }
 
-p {
+p, a {
     padding: 1.6em 0;
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: 0.8rem;
@@ -17,7 +19,7 @@ p {
 }
 
 header {
-    height: 7.25rem;
+    height: 6rem;
     background-color: #fff;
 }
 
@@ -26,8 +28,12 @@ footer {
     color: #fff;
 }
 
+footer p {
+    padding: 0.8rem 0;
+}
+
 .site-logo {
-    width: 8em;
+    width: 6em;
     margin: 1em 0;
 }
 
@@ -38,29 +44,37 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 #main-content .wrapper {
     min-height: calc(100vh - 10.5em);
+    background-color: #F3F5F9;
+    border-radius: 30px;
+    margin-bottom: 2rem;
 }
 
 #main-content {
-    background-color: #B1BAD9;
+    /* background-color: #F3F5F9; */
 }
 
-#main-content p {
+.main p {
     font-size: 1em;
     line-height: 1.5;
     color: #25255F;
 }
 
 #main-content h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
 }
 
 .hand {
     width: 4em;
+    position: absolute;
+    top: -2rem;
+    right: 4rem;
+    transform: scalex(-1);
 }
 
 .highlighted {
@@ -71,9 +85,14 @@ footer {
     border: 2px solid #f8ced2;
     display: -webkit-inline-box;
     margin: 0em;
-    transform: rotate(-6deg);
-    margin-top: 3px;
-    display: block;
+    transform: rotate(-3deg);
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
 }
 
 .btn {
@@ -81,7 +100,29 @@ footer {
     display: block;
     background-color: pink;
     border-radius: 3px;
-    margin-top: 2rem;
+    margin: 0 0.5rem 1rem;
+    cursor:pointer;
+    transition: all ease 0.5s;
+}
+
+.btn.toggle {
+    border-radius: 10px 0 0 10px;
+    margin:0;
+    color: #fff;
+    background-color: #EE589F;
+    border: 2px solid #EE589F;
+    font-weight: bold;
+}
+.btn.toggle:nth-child(2) {
+    border-radius: 0 10px 10px 0;
+    background-color: #fff;
+    color: #EE589F;
+}
+.btn.toggle:hover,
+.btn:hover{
+    background-color: #0096D9;
+    border: 2px solid #0096D9;
+    color: #fff;
 }
 
 .btn-pop {
@@ -93,4 +134,35 @@ footer {
     background-color: #fff;
     padding: 1rem;
     margin-top: 1rem;
+}
+
+canvas {
+    margin: 1rem auto;
+}
+
+.quote {
+    text-align: center;
+    padding: 1rem 4rem;
+}
+
+.course-card {
+    border: 2px dashed #EE589F;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.course-card h3,
+.course-card p{
+    text-align: center;
+    color: #EE589F;
+}
+
+.course-card p{
+    padding-top: 0;
+}
+
+.hideAndShow,
+.next-courses {
+    display: none;
 }
