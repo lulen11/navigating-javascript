@@ -88,3 +88,9 @@ footer {
     background-color: #ef4b4b;
     font-size: 2rem;
 }
+
+.weather-widget {
+    background-color: #fff;
+    padding: 1rem;
+    margin-top: 1rem;
+}

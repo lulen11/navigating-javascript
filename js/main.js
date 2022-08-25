@@ -1,27 +1,24 @@
-let womenInTech = ["Ruby", "Effie", "Alex", "Harriet"];
+const apiKey = '0f1cbc6fc2151af2df8d76990ed9905e';
+let lat = '-37.823960709402435';
+let lon = '144.9991673684373';
 
-let ages = [31, 19, 21, 64];
+const apiCall = 'https://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&appid='+apiKey+'&units=metric';
 
-// To access an array item by the index number
-// console.log(womenInTech[0]);
+// function fetchWeather() {
+//     fetch(apiCall)
+//     .then((response) => response.json())
+//     .then((data) => document.getElementById("city").innerHTML = data.name);
+// }
 
-// ages.sort();
+function fetchWeather() {
+    fetch(apiCall)
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+    }
 
-// console.log(ages);
+fetchWeather();
 
-// womenInTech.pop();
-// womenInTech.push("Amy");
 
-// console.log(womenInTech);
-
-function welcomeMessage(person){
-    console.log("Welcome to the CLG community, "+ person +". We're so glad you're here")
-}
-
-womenInTech.forEach(welcomeMessage);
-
-function awardsOver30(recepient){
-    return recepient >= 30;
-}
-
-console.log(ages.filter(awardsOver30));
+fetch("https://dog.ceo/api/breeds/image/random")
+    .then((response) => response.json())
+    .then((data) => console.log(data.message));
