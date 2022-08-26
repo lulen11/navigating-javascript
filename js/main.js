@@ -22,3 +22,48 @@ function inspireYou() {
     .then((response) => response.json())
     .then((data) => document.querySelector(".quote").innerHTML = data.quote);
 }
+
+
+class course {
+    constructor(title,language,level,description){
+        this.title = title;
+        this.language = language;
+        this.level = level;
+        this.description = description;
+    }
+}
+
+let courseNode = new course('Building APIs with Node.JS', 'Node', '3', 'In this course, you will be learning to build APIs with Node');
+let courseReact = new course('Building Apps with React.JS', 'React', '3', 'This course, you will learn all about Apps and React');
+
+let buttons = document.querySelector(".btn");
+let hideAndShow = document.querySelector(".hideAndShow");
+
+function showCourseQuery() {
+    // console.log("function is running");
+    hideAndShow.classList.toggle("hideAndShow");
+    inspireYou();
+
+    document.querySelector(".next-courses").classList.remove("next-courses");
+
+    let courseNodeClick = document.querySelector(".btn.node");
+    let courseReactClick = document.querySelector(".btn.react");
+
+    courseNodeClick.addEventListener("click", nextCourseNode);
+    courseReactClick.addEventListener("click", nextCourseReact);
+
+    function nextCourseNode(){
+        document.getElementById("course").innerHTML = courseNode.title;
+        document.getElementById("course-details").innerHTML = courseNode.description;
+
+        draw();
+    }
+    function nextCourseReact(){
+        document.getElementById("course").innerHTML = courseReact.title;
+        document.getElementById("course-details").innerHTML = courseReact.description;
+        
+        draw();
+    }
+}
+
+buttons.addEventListener("click", showCourseQuery);
